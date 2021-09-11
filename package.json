@@ -1,0 +1,14 @@
+{
+  "name": "code-collaborate-codeCompiler",
+  "version": "1.0.0",
+  "description": "This is the code compiler for code-coolaborate platform",
+  "repository": "https://github.com/AkashChatterjee1999/code-collaborate-codeCompiler.git",
+  "author": "akashchatterjee1999 <akashchatterjee1000@gmail.com>",
+  "license": "BSD 3-Clause licensce",
+  "private": false,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.12"
+  }
+}
