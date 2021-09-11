@@ -13,4 +13,4 @@ global.queue = [], global.ackIdToMap = new Map();
 
 setInterval(() => executeCode(), 250);
 
-server.listen(3000, () => console.log("Server started"));
+server.listen(process.env.PORT, () => console.log(`Server started at port: ${process.env.PORT}`));
