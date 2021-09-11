@@ -7,7 +7,7 @@ jobs:
   build-and-upload:
     name: Build image and upload to registry
     runs-on: ubuntu-18.04
-    container: ubuntu-18.04
+    container: ubuntu:18.04
     steps:
       - name: Checkout
         uses: actions/checkout@v2
