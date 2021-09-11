@@ -1,0 +1,21 @@
+name: Container Image Uploader
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-upload:
+    name: Build image and upload to registry
+    runs-on: ubuntu-18.04
+    container: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: logging into docker
+        run: echo ${{ secrets.PAT }} | docker login ghcr.io --username phanatic --password-stdin
+      - name: building image
+        run: docker build -t code-collaborate-compiler .
+      - name: Tag Image
+        run: docker tag code-collaborate-compiler ghcr.io/akashchatterjee1999/code-collaborate-compiler:latest
+      - name: push image to registry
+        run: docker push ghcr.io/akashchatterjee1999/code-collaborate-compiler:latest
