@@ -34,6 +34,7 @@ const checkStatus = ackId => {
         global.ackIdToMap.delete(ackId);
         return {
             "status": "executed",
+            "input": executionResult.input,
             "result": executionResult.output
         }
     }
